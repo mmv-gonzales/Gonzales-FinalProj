@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/FinalLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="c-style.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <img src="images/FinalLogo3.png" alt="Logo 1" class="logo">
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="all-products.html">ALL PRODUCTS</a></li>
+            <li><a href="about-us.html">ABOUT</a></li>
+            <li><a href="contact-us.html">CONTACT US</a></li>
+        </ul>
+
+        <div id="icons">
+            <a href="cart.html" style="color:#E6C029"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="reg-form.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </nav>   
+    <main>
+        <div class="container">
+            <h2>Shopping Cart</h2>
+            <div id="cart"></div>
+            <button onclick="clearCart()">Clear Cart</button>
+            <a href="all-products.html" class="continue-shopping">Continue Shopping</a>
+        </div>
+    </main>
+    <script>
+        function renderCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartContainer = document.getElementById('cart');
+            cartContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <span>${item.title} - ₱${item.price}.00</span>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `;
+                cartContainer.appendChild(cartItem);
+            });
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            renderCart();
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCart);
+    </script>
+</body>
+</html>

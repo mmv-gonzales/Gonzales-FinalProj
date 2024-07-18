@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang = "en">
+    <title>Contact Us | Pet Care</title>
+    <meta charset UTF = "8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/FinalLogo.png" type="image/x-icon">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel = "stylesheet" href = "cu-style.css"> 
+</head>
+
+<body>
+    <nav>
+        <input type = "checkbox" id = "check">
+        <label for = "check" class = "checkbtn">
+            <i class = "fas fa-bars"></i>
+        </label>
+        
+        <img src = "images/FinalLogo3.png" alt = "Logo 1" class = "logo">
+    
+        <ul>
+            <li><a href = "index.html">HOME</a></li>
+            <li><a href = "all-products.html">ALL PRODUCTS</a></li>
+            <li><a href = "about-us.html">ABOUT</a></li>
+            <li><a href = "contact-us.html" class = "active">CONTACT US</a></li>
+        </ul>
+
+        <div id = "icons">
+            <a href = "cart.html"><i class = "fa-solid fa-cart-shopping"></i></a>
+            <a href = "reg-form.html"><i class = "fa-solid fa-user"></i></a>
+        </div>
+    </nav>
+
+    <section class = "contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Keep in touch with us !</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Barangay 183, Zone 20,<br>Pasay City, 1309</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>202311207@fit.edu.ph</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Number</h3>
+                        <p>+63 9218 000 000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form action="https://formsubmit.co/catcare.forms@gmail.com" method="POST">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type = "text" name="name" required>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type = "email" name="email" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type = "submit" name="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class = "footer-content">
+            <img src = "images/FinalLogo3.png" alt = "Pet Care Logo" class = "logo">
+        </div>
+
+        <div class="footer-content">
+            <p>Developed by:</p>
+            <h2>Michaela Marie V. Gonzales</h2>
+        </div>
+        
+        <div class="footer-content">
+            <p>Email:</p>
+            <h2>202311207@fit.edu.ph</h2>
+        </div>
+    </footer>  
+</body>
+
+</html>
