@@ -111,3 +111,21 @@ form p a{
     color: blue;
     font-weight: 500;
 }
+
+.return-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-top: 20px;
+}
+
+.return-home i {
+    margin-right: 10px;
+}
+
+.return-home h4 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 500;
+}
