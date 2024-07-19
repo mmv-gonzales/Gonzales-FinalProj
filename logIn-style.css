@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,7 +28,7 @@ form {
     flex-direction: column;
 }
 
-form .logo{
+form .logo {
     width: 130px;
     display: block;
     margin-left: auto;
@@ -36,22 +36,22 @@ form .logo{
     margin-bottom: 10px;
 }
 
-form h2{
+form h2 {
     color: white;
     font-weight: 700;
     text-transform: uppercase;
-    font: 1.25em;
+    font-size: 1.25em;
     letter-spacing: 0.1em;
     margin-bottom: 50px;
 }
 
-.inputBox{
+.inputBox {
     position: relative;
     width: 300px;
     margin-bottom: 30px;
 }
 
-.inputBox input{
+.inputBox input {
     position: relative;
     width: 100%;
     padding: 5px 0;
@@ -64,33 +64,27 @@ form h2{
     letter-spacing: 0.15em;
 }
 
-.inputBox label{
+.inputBox label {
     position: absolute;
     left: 0;
     bottom: 20px;
     padding: 10px 0;
     pointer-events: none;
     color: #fff;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
-.inputBox input:focus ~ label, .inputBox input:valid ~ label{
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label {
     color: var(--clr);
 }
 
-.inputBox label.focus, .inputBox label.valid{
-    color: var(--clr);
-}
-
-.inputBox input:focus, .inputBox input:valid {
+.inputBox input:focus,
+.inputBox input:valid {
     border-bottom: 2px solid var(--clr);
 }
 
-.inputBox label:focus, .inputBox label:valid{
-    color: var(--clr);
-}
-
-.inputBox input[type = "submit"] {
+.inputBox input[type="submit"] {
     background: var(--clr);
     border: none;
     padding: 15px;
@@ -102,11 +96,29 @@ form h2{
     transition: 0.5s;
 }
 
-form p{
+form p {
     color: #fff;
 }
 
-form p a{
+form p a {
     color: blue;
+    font-weight: 500;
+}
+
+.return-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-top: 20px;
+}
+
+.return-home i {
+    margin-right: 10px;
+}
+
+.return-home h4 {
+    margin: 0;
+    font-size: 1em;
     font-weight: 500;
 }
